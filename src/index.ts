@@ -1,7 +1,3 @@
-export const dummyStatus: string = "okay";
+import { getPercision } from "./getPercision";
 
-export function dummy(): string {
-  return dummyStatus;
-}
-
-console.log(`dummy is ${dummy()}`);
+export { getPercision };
