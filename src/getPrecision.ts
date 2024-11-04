@@ -1,7 +1,7 @@
 import fromExponential from "from-exponential";
 
 /**
- * Return value of the getPercision() function.
+ * Return value of the getPrecision() function.
  */
 type ReturnValue = string | undefined;
 
@@ -13,16 +13,16 @@ type ReturnValue = string | undefined;
  *
  * @example
  * // returns "0.23"
- * getPercision(1.23)
+ * getPrecision(1.23)
  *
  * @example
  * // returns "0"
- * getPercision(123)
+ * getPrecision(123)
  *
  * @param {number} x - Numerical input value
  * @returns {ReturnValue} - String or undefined.
  */
-export function getPercision(x: number): ReturnValue {
+export function getPrecision(x: number): ReturnValue {
   // - return undefined for anything that is not a number
   if (typeof x !== "number") {
     return undefined;
@@ -38,7 +38,7 @@ export function getPercision(x: number): ReturnValue {
 
   // - if the remainder does not contain exponential notation,
   //   we may still have an issue to deal with. That is the dreaded
-  //   'floating-point percision' issue. As an example, 1.23 % 1 results
+  //   'floating-point precision' issue. As an example, 1.23 % 1 results
   //   in '0.22999999999999998' instead of '0.23'. To fix this issue we
   //   need to:
   //
@@ -46,7 +46,7 @@ export function getPercision(x: number): ReturnValue {
   //      to indicate how many digits to appear we want to appear
   //      after the floating-point in the remainder.
   //      we use the original length of the x because setting this
-  //      value too high results in the same floating-point percision
+  //      value too high results in the same floating-point precision
   //      issues. For example:
   //      Number(1.23%1).toFixed(2); // "0.23"
   //      Number(1.23%1).toFixed(25); // "0.229999999999999982236431"6

@@ -1,3 +1,3 @@
-import { getPercision } from "./getPercision";
+import { getPrecision } from "./getPrecision";
 
-export { getPercision };
+export { getPrecision };
