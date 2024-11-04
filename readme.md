@@ -11,11 +11,13 @@ This function can be used both in the browser and within the Node environment.
 ## Installation
 
 **NPM**
+
 `npm install get-precision`
 
 ## Import
 
 **Node.js**
+
 `import { getPrecision } from  "get-precision";`
 
 # API
