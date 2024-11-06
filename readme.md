@@ -1,6 +1,6 @@
-# getPrecision()
+# getPrecision
 
-Get the digits that are after the decimal point in a floating-point number e.g. the remainder. Works for some numbers with scientific notation, but needs more testing.
+Gets the digits that are after the decimal point in a floating-point number e.g. the remainder. Works for some numbers with scientific notation, but needs more testing.
 
 This function returns a `string` -- or `undefined` if the input is not a numerical value, because returning a `number` will result in automatic parsing with the JavaScript engine, resulting in a value that could be potentially in a scientific notation.
 
